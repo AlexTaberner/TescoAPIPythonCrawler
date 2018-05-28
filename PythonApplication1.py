@@ -20,7 +20,7 @@ for line in lines:
 	parseline = line.replace(' ', '%20')
 	parseline = parseline.replace('&', '%26')
 	query = 'https://dev.tescolabs.com/grocery/products/?query=%s&offset=0&limit=15' % (parseline)
-	req = http.request('GET', query, headers={"Ocp-Apim-Subscription-Key" : "9bcac9d5169e4ca8a8c429212719d1dc"})
+	req = http.request('GET', query, headers={"Ocp-Apim-Subscription-Key" : "API_KEY"})
 	jsonData = json.loads(req.data.decode('utf-8'))
 
 	loop = 1
